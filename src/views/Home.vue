@@ -2,7 +2,7 @@
   <div class="home">
     <h1>새차삿당! 신차검수하자 :D</h1>
     <ul class="list-wrap">
-      <li v-for="(item, idx) in list" :key="idx">
+      <li v-for="(item, idx) in list" :key="idx" @change="open()">
         <label>
           <input type="checkbox" :value="idx" v-model="checkNumb" />
           <span class="check-btn"></span>
@@ -18,6 +18,13 @@
       <b>{{ checkNumb.length }}&nbsp;</b>
       <span>/&nbsp;{{ list.length }}</span>
     </div>
+    <!-- complete -->
+    <div class="dim" @click="close()" v-if="modal">
+      <img src="../../public/party.png" alt="폭죽 배경" class="modal-bg" />
+      <div class="modal">
+        <p>조심조심 살살타여!</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -31,6 +38,7 @@ export default {
   data() {
     return {
       checkNumb: [],
+      modal: false,
       list: [
         {
           title: "외관 품질",
@@ -104,6 +112,18 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    open() {
+      if (this.checkNumb.length == this.list.length) {
+        this.modal = true;
+        document.querySelector("body").classList.add("noscroll");
+      }
+    },
+    close() {
+      this.modal = false;
+      document.querySelector("body").classList.remove("noscroll");
+    }
   }
 };
 </script>
@@ -188,6 +208,44 @@ li {
   span {
     float: left;
     font-size: 40px;
+  }
+}
+
+// modal
+.dim {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.7);
+  .modal-bg {
+    display: block;
+    width: 340px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: phung 0.5s;
+  }
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+  }
+}
+@keyframes phung {
+  0% {
+    transform: scale(0) translateY(-50%);
+  }
+  100% {
+    transform: scale(1) translateY(-50%);
   }
 }
 </style>

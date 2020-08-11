@@ -17,4 +17,7 @@
   line-height: 1;
   font-family: "Yeon Sung", cursive;
 }
+.noscroll {
+  overflow: hidden;
+}
 </style>
