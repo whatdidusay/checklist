@@ -117,6 +117,9 @@ h1 {
 }
 
 // contents
+ul {
+  padding-bottom: 80px;
+}
 li {
   border-bottom: 2px solid #ddd;
   &:hover {
