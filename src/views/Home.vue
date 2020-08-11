@@ -7,9 +7,9 @@
           <input type="checkbox" :value="idx" v-model="checkNumb" />
           <span class="check-btn"></span>
           <div class="item-wrap">
-            <p>{{ idx + 1 }}.&nbsp;{{ item.title }}</p>
-            <p>{{ item.part }}</p>
-            <p>{{ item.description }}</p>
+            <p class="title">{{ idx + 1 }}.&nbsp;{{ item.title }}</p>
+            <p class="part">{{ item.part }}</p>
+            <p class="des">{{ item.description }}</p>
           </div>
         </label>
       </li>
@@ -159,6 +159,16 @@ li {
       p {
         font-size: 25px;
         line-height: 1.2;
+        word-break: keep-all;
+        word-wrap: break-word;
+        &.part {
+          padding-top: 10px;
+          font-size: 20px;
+        }
+        &.des {
+          padding-top: 10px;
+          font-size: 15px;
+        }
       }
     }
   }
