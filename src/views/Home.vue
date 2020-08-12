@@ -112,6 +112,8 @@ export default {
     },
     close() {
       this.modal = false;
+      this.checkNumb = [];
+      window.scrollTo(0, 0);
       document.querySelector("body").classList.remove("noscroll");
     }
   }
