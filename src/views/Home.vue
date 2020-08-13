@@ -39,14 +39,14 @@ export default {
       list: [
         {
           title: "외관 품질",
-          img: "./public/exterior.png",
+          img: "/img/exterior.png",
           part: "조립상태, 단차, 스크래치, 도색불량",
           description:
             "도장면, 창문 유리면에 스크래치가 있는지 탁송중 돌맹이에 맞지 않았는지 확인!!"
         },
         {
           title: "타이어",
-          img: "./public/wheel.png",
+          img: "/img/wheel.png",
           part: "제조일, 휠 밸런스 확인 스티커, 휠 스크래치",
           description:
             "제조기간이 6개월 이내인지 확인하고 주황색 스티커 유무 꼭 확인! 차량 출고시 신차에는 무조건 스티커가 붙어있음 휠의 크기가 동일한지 확인!"
