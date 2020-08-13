@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: "/checklist/",
+  publicPath: "/checklist/public/",
   outputDir: "docs"
 };
