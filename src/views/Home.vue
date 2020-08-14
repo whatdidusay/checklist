@@ -4,7 +4,7 @@
     <ul class="list-wrap">
       <li v-for="(item, idx) in list" :key="idx" @change="open()">
         <label>
-          <input type="checkbox" :value="idx" v-model="checkNumb" />
+          <input type="checkbox" :value="idx" ref="check" v-model="checkNumb" />
           <span class="check-btn"></span>
           <div class="item-wrap">
             <p class="title">{{ idx + 1 }}.&nbsp;{{ item.title }}</p>
@@ -131,7 +131,11 @@ export default {
     close() {
       this.modal = false;
       this.checkNumb = [];
-      window.scrollTo(0, 0);
+      window.scrollTo({
+        behavior: "smooth",
+        top: 0,
+        left: 0
+      });
       document.querySelector("body").classList.remove("noscroll");
     }
   }
