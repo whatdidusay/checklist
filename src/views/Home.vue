@@ -4,7 +4,7 @@
     <ul class="list-wrap">
       <li v-for="(item, idx) in list" :key="idx" @change="open()">
         <label>
-          <input type="checkbox" :value="idx" ref="check" v-model="checkNumb" />
+          <input type="checkbox" :value="idx" v-model="checkNumb" />
           <span class="check-btn"></span>
           <div class="item-wrap">
             <p class="title">{{ idx + 1 }}.&nbsp;{{ item.title }}</p>
@@ -34,6 +34,8 @@ export default {
   name: "Home",
   data() {
     return {
+      stuff: null,
+      scrollPos: [],
       checkNumb: [],
       modal: false,
       list: [
