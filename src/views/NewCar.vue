@@ -196,7 +196,7 @@ li {
         width: 100%;
       }
       p {
-        font-size: 25px;
+        font-size: 20px;
         line-height: 1.2;
         word-break: keep-all;
         word-wrap: break-word;

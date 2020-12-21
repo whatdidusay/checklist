@@ -4,14 +4,12 @@ const routes = [
   {
     path: "/",
     name: "newCar",
-    component: () =>
-      import("../views/NewCar.vue")
+    component: () => import("../views/NewCar.vue")
   },
   {
     path: "/checkCar",
     name: "checkCar",
-    component: () =>
-      import("../views/CheckCar.vue")
+    component: () => import("../views/CheckCar.vue")
   }
 ];
 
