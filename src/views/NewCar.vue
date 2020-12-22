@@ -149,6 +149,7 @@ h1 {
   height: 100px;
   line-height: 100px;
   font-size: 35px;
+  font-weight: 500;
   text-align: center;
 }
 
