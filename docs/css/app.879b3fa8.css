@@ -1,0 +1,1 @@
+#app,*{font-family:Yeon Sung,cursive}*{margin:0;padding:0;list-style:none;text-decoration:none;box-sizing:border-box;line-height:1}.noscroll{overflow:hidden}nav{background:#ddd}nav,nav a{text-align:center}nav a{display:inline-block;width:50%;font-size:20px;line-height:40px;color:#fff}nav a.router-link-active{color:#000}
